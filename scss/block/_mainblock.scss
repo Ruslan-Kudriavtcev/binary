@@ -1,0 +1,138 @@
+.mainblock {
+   flex: 1 1 auto;
+   position: relative;
+   @include flexbox();
+   justify-content: center;
+   text-align: center;
+   padding: 50px 0;
+
+   @media screen and (max-width: $md3+px),
+   screen and (max-height: 600px) {
+      padding: 20px 0;
+   }
+
+   &__content {
+      position: relative;
+      z-index: 1;
+      flex: 1 1 auto;
+
+      .container {
+         height: 100%;
+         @include flexbox();
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+
+   &__logo {}
+
+   &__text {
+      position: relative;
+      color: #ffffff;
+      font-family: $fm;
+      padding: 0px 0px 45px 0px;
+      margin: 30px 0;
+
+      &:after {
+         content: '';
+         width: 105px;
+         height: 2px;
+         background-color: #fff;
+         position: absolute;
+         left: 50%;
+         bottom: 0;
+         margin: 0px 0px 0px -52.5px;
+      }
+   }
+
+   &__title {
+      margin: 0px 0px 10px 0px;
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 40px;
+      letter-spacing: 5.43px;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $md3+px),
+      screen and (max-height: 600px) {
+         font-size: 25px;
+         line-height: 30px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 4.15px;
+   }
+
+   &__footer {
+      @include flexboxinline();
+      flex-direction: column;
+   }
+
+   &__arrow {
+      position: relative;
+      animation: arrow 2s infinite ease;
+   }
+
+   &__image {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+
+   &__btn {
+      margin: 0px 0px 60px 0px;
+
+      @media screen and (max-width: $md3+px),
+      screen and (max-height: 600px) {
+         margin: 0px 0px 30px 0px;
+      }
+   }
+}
+
+@-moz-keyframes arrow {
+   0% {
+      top: 0;
+   }
+
+   50% {
+      top: 10px;
+   }
+
+   100% {
+      top: 0;
+   }
+}
+
+@-webkit-keyframes arrow {
+   0% {
+      top: 0;
+   }
+
+   50% {
+      top: 10px;
+   }
+
+   100% {
+      top: 0;
+   }
+}
+
+@keyframes arrow {
+   0% {
+      top: 0;
+   }
+
+   50% {
+      top: 10px;
+   }
+
+   100% {
+      top: 0;
+   }
+}

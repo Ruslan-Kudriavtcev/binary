@@ -1,4 +1,36 @@
-﻿/*Обнуление*/
+﻿// МИКСИНЫ
+@mixin flexbox() {
+   display: -webkit-flex;
+   display: -webkit-box;
+   display: -moz-flex;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -ms-flex;
+   display: -o-flex;
+   display: flex;
+   font-size: 0;
+}
+
+@mixin flexboxinline() {
+   display: -webkit-inline-flex;
+   display: -moz-inline-flex;
+   display: -ms-inline-flex;
+   display: -o-inline-flex;
+   display: inline-flex;
+}
+
+// ПЕРЕМЕННЫЕ
+$minwidth: 320px;
+$mw: 1100;
+$md1: $mw+12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// ============================================//
+
+
+/*Обнуление*/
 * {
    padding: 0;
    margin: 0;
@@ -40,6 +72,16 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
+
+   &.lock {
+      overflow: hidden;
+
+      @media(max-width: $md3+px) {
+         width: 100%;
+         position: fixed;
+         overflow: hidden;
+      }
+   }
 }
 
 input,
@@ -89,3 +131,46 @@ h6 {
 }
 
 /*--------------------*/
+// Оболочка
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   @include flexbox();
+   flex-direction: column;
+}
+
+// ОСНОВНАЯ СЕТКА
+.container {
+   max-width: $mw+px;
+   margin: 0 auto;
+   width: 100%;
+
+   @media(max-width: $md1+px) {
+      max-width: 970px;
+   }
+
+   @media(max-width: $md2+px) {
+      max-width: 750px;
+   }
+
+   @media(max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+
+// ================================================= //
+
+// Делаем картинку фоновой
+
+.ibg {
+
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   img {
+      display: none;
+   }
+}

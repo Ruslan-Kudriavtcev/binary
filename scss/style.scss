@@ -6,3 +6,11 @@
 @import "_fonts";
 // Подключаем общие стили сайта
 @import "_interface";
+// Подключаем стили _mainblock
+@import "block/_mainblock";
+// Подключаем стили menu
+@import "block/_menu";
+// Подключаем стили aboit
+@import "block/_about";
+// Подключаем стили portfolio
+@import "block/_portfolio";
