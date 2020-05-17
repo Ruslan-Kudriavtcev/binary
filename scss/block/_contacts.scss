@@ -1,0 +1,159 @@
+.contacts {
+   padding: 180px 0px 80px 0px;
+
+   @media(max-width: $md2+px) {
+      padding: 80px 0px 50px 0px;
+   }
+
+   @media(max-width: $md3+px) {
+      padding: 30px 0px 30px 0px;
+   }
+
+   &__header-block {
+      margin: 0px 0px 120px 0px;
+
+      @media(max-width: $md2+px) {
+         margin: 0px 0px 50px 0px;
+      }
+
+      @media(max-width: $md3+px) {
+         margin: 0px 0px 30px 0px;
+      }
+   }
+
+   &__body {
+      @include flexbox();
+      margin: 0 -25px;
+
+      @media(max-width: $md3+px) {
+         display: block;
+      }
+   }
+
+   &__column {
+      flex: 0 1 50%;
+      padding: 0 25px;
+
+   }
+
+   &__form {
+      text-align: right;
+
+      @media(max-width: $md3+px) {
+         text-align: left;
+         margin: 0px 0px 30px 0px;
+      }
+   }
+
+   &__content {
+      max-width: 260px;
+
+      @media(max-width: $md3+px) {
+         max-width: none;
+      }
+   }
+
+   &__text {
+      font-family: $fm;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+      margin: 0px 0px 35px 0px;
+   }
+
+   &__name {
+      font-family: $fm;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0px 0px 25px 0px;
+   }
+
+   &__social {
+      margin: 0px 0px 15px 0px;
+   }
+
+   &__email {
+      font-size: 14px;
+      font-family: $fm;
+
+      a {
+         font-weight: 700;
+         color: #000;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+.form-contacts {
+   &__body {
+      display: inline-block;
+      width: 100%;
+      max-width: 385px;
+
+      @media(max-width: $md3+px) {
+         max-width: none;
+         display: block;
+      }
+
+   }
+
+   &__row {
+      @include flexbox();
+      margin: 0 -15px 70px -15px;
+
+      @media(max-width: $md3+px) {
+         margin: 0 -15px 30px -15px;
+      }
+
+      @media(max-width: $md4+px) {
+         display: block;
+      }
+   }
+
+   &__colum {
+      flex: 0 1 50%;
+      padding: 0 15px;
+
+      @media(max-width: $md4+px) {
+         max-width: none;
+
+         &:first-child {
+            margin: 0px 0px 30px 0px;
+         }
+      }
+   }
+
+   &__input {}
+
+   &__label {
+      font-family: $fm;
+      margin: 0px 0px 10px 0px;
+      text-transform: uppercase;
+      text-align-last: left;
+      font-size: 14px;
+      font-weight: 700;
+   }
+
+   &__btn.btn {
+      margin: 35px 0px 0px 0px;
+
+      @media(max-width: $md3+px) {
+         display: block;
+         width: 100%;
+      }
+   }
+}
+
+
+
+.social {
+
+   @include flexbox();
+
+   &__item {
+      margin: 0px 15px 0px 0px;
+   }
+}

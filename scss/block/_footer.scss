@@ -1,0 +1,52 @@
+.footer {
+   background-color: #3c3c3c;
+   padding: 45px 0;
+   position: relative;
+   z-index: 5;
+
+   &__body {
+      text-align: center;
+   }
+
+   &__logo {
+      display: inline-block;
+      margin: 0px 0px 40px 0px;
+   }
+
+   &__menu {
+      text-align: center;
+   }
+
+   &__list {
+      @include flexbox();
+      justify-content: center;
+      align-items: center;
+      margin: 0px 0px 35px 0px;
+
+      li {
+         margin: 0 15px;
+      }
+   }
+
+   &__text {
+      color: #6c6c6c;
+      font-family: $fm;
+      font-size: 14px;
+      font-weight: 400;
+   }
+
+   &__link {
+      color: #a4a4a4;
+      font-family: $fm;
+      font-size: 14px;
+      font-weight: 400;
+
+      &:hover {
+         color: #fff;
+      }
+
+      &__text {
+         color: #fff;
+      }
+   }
+}

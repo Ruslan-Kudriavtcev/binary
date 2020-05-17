@@ -10,6 +10,7 @@
    padding: 0 0;
    height: 47px;
    padding: 0 42px;
+   background-color: transparent;
    line-height: 44px;
    font-family: $fm;
    font-size: 16px;
@@ -104,4 +105,31 @@
       font-weight: 300;
       line-height: 25.89px;
    }
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.input {
+   height: 50px;
+   border-radius: 0 !important;
+   border-top: 1px solid #000;
+   font-size: 15px;
+   width: 100%;
+   display: block;
+   padding: 0 20px;
+   background-color: #f8f7f7;
+
+}
+
+textarea.input {
+   resize: none;
+   height: 117px;
+   padding: 10px 20px;
 }
